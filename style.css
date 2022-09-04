@@ -1,0 +1,244 @@
+*{
+
+}
+
+.btn-1{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    border-radius: 24px;
+    order: 0;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 19px;
+    font-size: 20px;
+    text-align: center;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+#play{
+    background: #0A3871;
+    position: absolute;
+    left: 39%;
+    top: 42%;
+    width: 341px;
+    height: 92px;
+    color: #FFFFFF;
+}
+
+#play:hover{
+    background: #0A3871;
+    position: absolute;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+
+
+#new{
+     box-sizing: border-box;
+    padding: 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 280px;
+    height: 67px;
+    left: 41%;
+    top: 54%;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
+#new:hover{
+    box-sizing: border-box;
+    padding: 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 280px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    opacity: 0.8;
+}
+
+#inpt-p{
+    display: none;
+    position: absolute;
+    width: 299px;
+    height: 48px;
+    border-radius: 17px;
+    left: 376px;
+    top: 256px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871
+
+}
+
+#save{
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 371px;
+    height: 80px;
+    background: #0A3871;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    position: absolute;
+    left: 20%;
+    top: 80%;
+    color: white;
+}
+
+#save:hover{
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    background: #0A3871;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    color: white;
+    opacity: 0.8;
+}
+
+#cancel{
+    display: none;
+    box-sizing: border-box;
+    padding: 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 371px;
+    height: 80px;
+    left: 54%;
+    top: 80%;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
+#cancel:hover{
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    background: #0A3871;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    color: white;
+    opacity: 0.8;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.pholder{
+    display: none;
+}
+
+.line{
+    display: flex;
+    width: 80px;
+    height: 4px;
+    background: #0A3871;
+    border-radius: 8px;
+
+}
+.iholder{
+    border-width: 0 0 0 0;
+    width: 50px;
+    height: 60px;
+}
+
+.iholder:enabled{
+    border-width: 0 0 0 0;
+    font-weight: 400;
+}
+#letra1{
+    display: flex;
+    width: 171px;
+    height: 64px;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 30%;
+    top: 85%;
+}
+#letra2{
+    display: flex;
+    width: 171px;
+    height: 64px;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 40%;
+    top: 85%;
+}
+#letra3{
+    display: flex;
+    width: 171px;
+    height: 64px;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+}
+#letra4{
+    display: flex;
+    width: 171px;
+    height: 64px;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 60%;
+    top: 85%;
+}
+#letra5{
+    display: flex;
+    width: 171px;
+    height: 64px;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 70%;
+    top: 85%;
+}
+#letra6{
+    display: flex;
+    width: 171px;
+    height: 64px;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 80%;
+    top: 85%;
+}
