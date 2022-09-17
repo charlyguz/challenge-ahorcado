@@ -6,14 +6,26 @@ const save = document.querySelector("#save");
 const cancel = document.querySelector("#cancel");
 const contenedorLetra = document.querySelector(".game");
 const lineas = document.querySelectorAll(".pholder");
+
 let words = [ "hola", "html", "js", "css", "php", "java", "python", "c++", "c#", "ruby", "swift", "kotlin", "go", "sql", "mysql", "mongodb", 
 "react", "angular", "vue", "node", "express", "jquery", "ajax", "one", "oracle", "alura"];
 let word = 0;
 let result = "";
+
+function aleatorio(){
+    let palabra = words[Math.floor(Math.random() * words.length)]
+    result = palabra
+    console.log(result);
+    console.log(result.length);
+    return result;
+}   
+
+
 btnPlay.addEventListener("click", function play(){
     clickAnyB();
-    playGame();
 
+    aleatorio();
+    playGame();
 });
 
 btnNew.addEventListener("click", function newWord(){
@@ -28,7 +40,7 @@ cancel.addEventListener("click", function cancel(){
 
 function clickAnyB(){
     btnNew.style.display = "none";
-    btnPlay.style.display = "none";
+    document.querySelector("#play").style.display = "none";
 }
 
 function clickPlay(){
@@ -51,29 +63,43 @@ function clickCancel(){
     btnPlay.style.display = "flex";
 }
 
-
-const generarAleatorio = ( min , max ) => {
-        return Math.floor(Math.random() * (max-min)) + min;
- };
-
-function aleatorio(){
-    let random = generarAleatorio(0, words.length);
-    word = words[random];
-    return word.length;
-
-}   
 function playGame (){
-    for (let i = 1; i <= aleatorio(); i++) {
+
+    for (let i = 1; i <= result.length; i++) {
 
         nuevalinea = `
         <div class="pholder" id="letra${i}"> 
             <div class="line" ></div>
-            <input type="text" class="iholder">
+            <input type="text" maxlength="1" class="iholder" id="letraGanadora${i}" >
         </div>
         `
         contenedorLetra.innerHTML += nuevalinea;
-    
-        //return word[i-1] = word[i-1].toUpperCase();
+        document.querySelector(`#letraGanadora${i}`).addEventListener("keydown", validarLetra);
     }
+    
+    
 }
 
+
+function validarLetra(){
+    
+        for (let i = 0; i < result.length; ) {
+            console.log(result[i]);
+            
+            let letra = document.querySelector(`#letraGanadora${i}`);     
+            let letraValue = letra?.value || '';
+            if (letraValue = result[i]) {
+                document.querySelector(`.dibujo`).style.backgroundColor = "green";
+            }else{
+                document.querySelector(`.dibujo`).style.backgroundColor = "red";
+            }
+            i++
+        }
+    
+    
+};
+
+
+
+
+//se puede usar u aray dentro de un array*
